@@ -1,0 +1,25 @@
++--------------------+            +--------------------+
+|    Kategoriak      |            |     Szerzok       |
++--------------------+            +--------------------+
+| kategoria_id (PK)  |<---------+ | szerzo_id (PK)    |
+| nev                |          | | nev               |
++--------------------+          | | email             |
+                                +--------------------+
+                                       |
+                                       |
+                                       |
+                                       v
++--------------------+            +--------------------+          +---------------------+
+|     Cikkek         |            |    Reklamok       |          |    Oldal_Elemek     |
++--------------------+            +--------------------+          +---------------------+
+| cikk_id (PK)       |          +-| reklam_id (PK)    |          | elem_id (PK)        |
+| cim                |          | | tartalom          |          | elem_tipus          |
+| szoveg             |          | | pozicio           |          | tartalom_id         |
+| datum_kiadas       |          | +-------------------+          | oldal_tipus         |
+| kategoria_id (FK)  |<---------+                               +---------------------+
+| szerzo_id (FK)     |
++--------------------+
+
+GYULAFI LEVENTE
+MOLNÁR DOMINIK
+FODOR BÁLINT
