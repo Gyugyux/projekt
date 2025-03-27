@@ -1,0 +1,45 @@
++--------------------+
+|    Kategoriak      |
++--------------------+
+| kategoria_id (PK)  |
+| nev                |
++--------------------+
+          |
+          | (1:N)
+          |
+          v
++--------------------+            +--------------------+
+|     Cikkek        |            |     Szerzok       |
++--------------------+            +--------------------+
+| cikk_id (PK)      |<---------+ | szerzo_id (PK)    |
+| cim               |          | | nev               |
+| szoveg            |          | | email             |
+| datum_kiadas      |          | +--------------------+
+| kategoria_id (FK) |          
+| szerzo_id (FK)    |          
++--------------------+
+          |
+          | (1:N)
+          |
+          v
++--------------------+            +--------------------+
+|   Hozzaszolasok   |            |   Felhasznalok    |
++--------------------+            +--------------------+
+| hozzaszolas_id (PK)|
+| cikk_id (FK)      |<--------+ |felhasznalo_id (PK)|
+| felhasznalo_id (FK) |       |  nev                |
+| szoveg            |         |  email              |
+| datum             |         |  jelszo_hash        |
++--------------------+        | +--------------------+
+                              |
+                              |
+							  |
+                              |
++--------------------+        |  +--------------------+
+|     Reklamok      |         |  |   Oldal_Elemek    |
++--------------------+        v  +--------------------+
+| reklam_id (PK)    |          +-| elem_id (PK)      |
+| tartalom          |          | | elem_tipus        |
+| pozicio           |          | | tartalom_id       |
++--------------------+         | | oldal_tipus       |
+                                +--------------------+
