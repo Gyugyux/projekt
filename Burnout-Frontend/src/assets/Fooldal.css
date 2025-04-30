@@ -1,0 +1,111 @@
+.freckle-face-regular {
+    font-family: "Freckle Face", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    background-color: #414141 !important;
+    margin: 0 !important;
+
+}
+
+h1{
+    color: #f5b06b !important;
+    font-size: 50px !important;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#cim{
+    color:  #f5b06b !important;
+}
+
+#icon{
+    color:  black !important;
+}
+
+a{
+    color:  black !important;
+    text-decoration: none !important;
+}
+.navbar {
+    background-color: #f5b06b !important;
+}
+
+.btn {
+    padding: 10px !important;
+    background-color: #989898 !important;
+    border: 2px solid black !important;
+    border-radius: 20px !important;
+}
+
+.csik {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+
+label.hamburger {
+    display: block;
+    width: 40px;
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+}
+
+input#hamburger {
+    display: none
+}
+
+#navbarSupportedContent{
+    background-color: #989898 !important;
+    border: 1px solid black !important;
+    width: 80% !important;
+    text-align: center !important;
+}
+
+.fi-rs-user {
+    font-size: 20px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    background-color: #989898 !important;
+    border: 2px solid black !important;
+    border-radius: 20px !important;
+}
+
+.line {
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background: #000;
+    transition: 0.5s;
+}
+
+.line:nth-child(1) {
+    top: 12px;
+}
+
+.line:nth-child(2) {
+    top: 24px;
+}
+
+.line:nth-child(3) {
+    top: 36px;
+}
+
+#hamburger:checked + .hamburger .line:nth-child(1) {
+    transform: translateY(12px) rotate(-45deg);
+}
+
+#hamburger:checked + .hamburger .line:nth-child(2) {
+    opacity: 0;
+}
+
+#hamburger:checked + .hamburger .line:nth-child(3) {
+    transform: translateY(-12px) rotate(45deg);
+}

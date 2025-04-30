@@ -1,0 +1,106 @@
+Frontend részletezése
+A webes felület Vue.js keretrendszerrel készült. A modern megjelenés és felhasználóbarát élmény érdekében Bootstrap került integrálásra, amely reszponzív elrendezést biztosít.
+
+Jellemzők:
+Routing: A Vue Router segítségével lehet navigálni az oldalak között
+
+Axios: REST API-k meghívása a backend Laravel szerver felé
+
+Könnyen bővíthető komponens-alapú felépítés
+
+WPF alkalmazás
+Az asztali alkalmazás WPF (Windows Presentation Foundation) technológiával készült, .NET környezetben.
+
+Funkciók:
+Teljes körű CRUD lehetőség a cikkekhez (létrehozás, szerkesztés, törlés, listázás)
+
+Csak szerkesztői jogosultsággal használható
+
+REST API-n keresztül kommunikál a Laravel backenddel
+
+MVVM architektúra és témakezelés (sötét/világos mód)
+
+Backend (Laravel) fejlesztések – Dominik munkája
+A backend teljes REST API-t biztosít a frontend és WPF kliens számára. A következő komponensek és funkcionalitások kerültek kivitelezésre:
+
+Adatkezelés
+Modellek, Migrációk, Factory-k, Seederek lettek létrehozva az alábbi entitásokhoz:
+
+User
+
+Cikk (cikkek dummy adatokkal kerültek feltöltésre)
+
+API routing
+Az API végpontok az api.php fájlban lettek definiálva
+
+/api/profile végpont CRUD műveleteket tesz lehetővé a felhasználói fiókon
+
+Kiíratás (GET)
+
+Módosítás (PUT)
+
+Törlés (DELETE)
+
+CikkController
+A CikkController a cikkek kezeléséért felelős:
+
+Webes megjelenítésre szolgáló GET hívás főoldalon
+
+WPF segítségével történik a cikkek létrehozása, szerkesztése és törlése
+
+Minden művelet REST API-n keresztül működik
+
+Validáció
+Az API minden felhasználói és cikk műveletnél szigorú validációt alkalmaz:
+
+Email egyediség és formátumellenőrzés
+
+Jelszó minimum hossz követelmény
+
+Hiányzó vagy hibás mezők visszautasítása
+
+Hitelesítés: Laravel Sanctum
+A rendszer Laravel Sanctum csomagot használ token-alapú autentikációra
+
+Védett végpontok csak bejelentkezés után érhetők el
+
+Postman tesztelés eredményei
+A REST API tesztelése Postman-ben történt. A következő műveletek lettek kipróbálva:
+
+
+Végpont	Művelet	Eredmény
+/api/cikkek	GET	Sikeres adatlekérés, JSON válasz
+/api/register	POST	Sikeres regisztráció valid adat esetén, hibaüzenet rossz bemenetnél
+/api/login	POST	Helyes belépés, hibás email/jelszó esetén visszautasítás
+/api/logout	POST	Sikeres kijelentkezés
+/api/profile	GET/PUT/DELETE	CRUD műveletek valid módon működnek
+
+Funkcionális bővítések
+
+Hozzászólás rendszer: felhasználók kommentálhatnák a cikkeket
+Like/dislike rendszer: közösségi interakciók növelése érdekében
+Címkék és kategóriák: cikkek kategorizálása és szűrhetősége
+Email értesítések: új cikkekről vagy profilmódosításról
+Biztonság és jogosultság
+Jogosultsági szintek bővítése (admin, moderátor stb.)
+Logolás és audit: felhasználói műveletek nyomon követése
+Technikai bővítések
+Mobilos reszponzivitás finomítása és PWA támogatás
+Docker alapú konténerizálás és CI/CD bevezetése
+Admin dashboard: statisztikák és felhasználói tevékenységek vizualizálása
+Nyelvi és nemzetközi támogatás
+Többnyelvű felület (magyar, angol stb.)
+
+Tesztelés képek:
+Postman API tesztek képernyőképei
+
+Laravel backend kódrészletek képernyőképei
+
+Készítők
+Backend fejlesztő: Dominik
+Frontend fejlesztés (Vue.js): Gyulafi Levente
+WPF alkalmazás fejlesztés: Fodor Bálint
+
+Kapcsolat: [burnout@burnout.hu / @burnout]
+
+Verzió: 1.0.0
