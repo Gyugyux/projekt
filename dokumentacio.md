@@ -1,4 +1,17 @@
+A mappán belül található az .sln projekt fájl, amit meg lehet nyitni Visual Studio segítségével.
+
+Web (Backend)
+Laravel
+composer install.
+php artisan serve
+
+Web (Frontend)
+Vue
+cd frontend mappa
+npm run start
+SQL fájl a gyökérmappában található: burnout.sql
 Frontend részletezése
+
 A webes felület Vue.js keretrendszerrel készült. A modern megjelenés és felhasználóbarát élmény érdekében Bootstrap került integrálásra, amely reszponzív elrendezést biztosít.
 
 Jellemzők:
@@ -11,6 +24,7 @@ Könnyen bővíthető komponens-alapú felépítés
 WPF alkalmazás
 Az asztali alkalmazás WPF (Windows Presentation Foundation) technológiával készült, .NET környezetben.
 
+
 Funkciók:
 Teljes körű CRUD lehetőség a cikkekhez (létrehozás, szerkesztés, törlés, listázás)
 
@@ -20,7 +34,7 @@ REST API-n keresztül kommunikál a Laravel backenddel
 
 MVVM architektúra és témakezelés (sötét/világos mód)
 
-Backend (Laravel) fejlesztések – Dominik munkája
+Backend (Laravel) fejlesztések
 A backend teljes REST API-t biztosít a frontend és WPF kliens számára. A következő komponensek és funkcionalitások kerültek kivitelezésre:
 
 Adatkezelés
@@ -98,8 +112,8 @@ Laravel backend kódrészletek képernyőképei
 
 Készítők
 Backend fejlesztő: Dominik
-Frontend fejlesztés (Vue.js): Gyulafi Levente
-WPF alkalmazás fejlesztés: Fodor Bálint
+Frontend fejlesztő (Vue.js): Gyulafi Levente
+WPF alkalmazás fejlesztő: Fodor Bálint
 
 Kapcsolat: [burnout@burnout.hu / @burnout]
 
